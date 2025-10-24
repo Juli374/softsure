@@ -47,6 +47,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .nav-left {
@@ -911,25 +913,39 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.8rem;
+                margin-bottom: 1.5rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .hero h1 span {
+                display: block;
+            }
+
+            .accent-separator {
+                display: inline-block;
+                margin: 0 0.1em;
             }
 
             .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+                padding: 0 1rem;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
+                gap: 1rem;
             }
 
             .btn {
                 width: 100%;
                 text-align: center;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
             }
 
             .grid {
@@ -939,6 +955,14 @@
             .footer-top {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .hero-text {
+                max-width: 100%;
             }
         }
     </style>
@@ -970,7 +994,7 @@
 
         <div class="hero-content">
             <div class="hero-text">
-                <h1>E-Commerce <span class="accent-separator">+</span> <span>Marketing Excellence</span></h1>
+                <h1>E–Commerce <span class="accent-separator">+</span> <span>Marketing<br>Excellence</span></h1>
                 <p>SOFTSURE operates a sophisticated international trade and services platform, with cutting-edge AI analytics and comprehensive digital marketing solutions for global entrepreneurs.</p>
                 <div class="cta-buttons">
                     <button class="btn btn-primary" onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})">Get Started</button>
