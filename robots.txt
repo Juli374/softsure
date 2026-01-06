@@ -1,0 +1,11 @@
+# SOFTSURE LLC - robots.txt
+# https://softsure.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://softsure.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

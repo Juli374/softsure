@@ -3,8 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOFTSURE - E-Commerce & Marketing Solutions</title>
+    <title>SOFTSURE - E-Commerce & Marketing Solutions | AI Analytics Platform</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SOFTSURE LLC - International e-commerce, digital marketing, and AI analytics platform. Specialized in Amazon marketplace optimization, KDP publishing, and data-driven business solutions.">
+    <meta name="keywords" content="e-commerce, Amazon marketing, KDP analytics, AI analytics, digital marketing, marketplace optimization, Batumi Georgia, international trade">
+    <meta name="author" content="SOFTSURE LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://softsure.vercel.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://softsure.vercel.app/">
+    <meta property="og:title" content="SOFTSURE - E-Commerce & Marketing Solutions">
+    <meta property="og:description" content="International e-commerce, digital marketing, and AI analytics platform. Powering marketplace success with cutting-edge technology.">
+    <meta property="og:image" content="https://softsure.vercel.app/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="SOFTSURE">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://softsure.vercel.app/">
+    <meta name="twitter:title" content="SOFTSURE - E-Commerce & Marketing Solutions">
+    <meta name="twitter:description" content="International e-commerce, digital marketing, and AI analytics platform. Powering marketplace success.">
+    <meta name="twitter:image" content="https://softsure.vercel.app/og-image.svg">
+
+    <!-- Favicon & App Icons -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%230066ff;stop-opacity:1' /><stop offset='50%' style='stop-color:%2300d9ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%230080ff;stop-opacity:1' /></linearGradient></defs><rect x='10' y='10' width='80' height='80' rx='15' ry='15' fill='url(%23grad)' /><text x='50' y='65' font-size='60' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'>S</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%230066ff;stop-opacity:1' /><stop offset='50%' style='stop-color:%2300d9ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%230080ff;stop-opacity:1' /></linearGradient></defs><rect x='10' y='10' width='80' height='80' rx='15' ry='15' fill='url(%23grad)' /><text x='50' y='65' font-size='60' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'>S</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0066ff">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SOFTSURE LLC",
+        "description": "International e-commerce, digital marketing, and AI analytics platform",
+        "url": "https://softsure.vercel.app",
+        "logo": "https://softsure.vercel.app/og-image.svg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@softsureco.com",
+            "contactType": "customer service",
+            "availableLanguage": ["English"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Inasaridze Street 24, Apt. 47",
+            "addressLocality": "Batumi",
+            "addressRegion": "Adjara",
+            "postalCode": "6010",
+            "addressCountry": "GE"
+        },
+        "sameAs": [],
+        "founder": {
+            "@type": "Person",
+            "name": "Yulii Parfonov"
+        },
+        "foundingDate": "2025",
+        "areaServed": ["US", "UK", "DE", "FR", "ES", "IT", "CA", "AU"]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -970,9 +1033,311 @@
                 font-size: 2rem;
             }
         }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-content {
+            text-align: center;
+        }
+
+        .preloader-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--accent) 0%, var(--accent-alt) 50%, var(--accent-light) 100%);
+            border-radius: 20px 4px 20px 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: white;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .preloader-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Burger Menu */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .burger-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--text);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .burger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .burger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 20, 25, 0.98);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu li {
+            margin: 1.5rem 0;
+        }
+
+        .mobile-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 998;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.5);
+        }
+
+        .scroll-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 31, 46, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+            z-index: 9998;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .cookie-banner.visible {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cookie-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .cookie-text p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .cookie-text a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .cookie-text a:hover {
+            text-decoration: underline;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .cookie-btn-accept {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+        }
+
+        .cookie-btn-accept:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+        }
+
+        .cookie-btn-decline {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .cookie-btn-decline:hover {
+            border-color: var(--text-secondary);
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .scroll-top {
+                bottom: 90px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">S</div>
+            <div class="preloader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+            <li><a href="#ai" onclick="closeMobileMenu()">AI Solutions</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#operations" onclick="closeMobileMenu()">Roadmap</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="nav-left" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'})">
@@ -986,6 +1351,11 @@
             <li><a href="#operations">Roadmap</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -1316,21 +1686,134 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+        </svg>
+    </button>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h4>Cookie Notice</h4>
+                <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy-policy.html">Privacy Policy</a> for more information.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 800);
+        });
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const burger = document.getElementById('burgerMenu');
+            const menu = document.getElementById('mobileMenu');
+            burger.classList.toggle('active');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            const burger = document.getElementById('burgerMenu');
+            const menu = document.getElementById('mobileMenu');
+            burger.classList.remove('active');
+            menu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.pageYOffset > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Cookie Consent
+        function showCookieBanner() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                setTimeout(function() {
+                    document.getElementById('cookieBanner').classList.add('visible');
+                }, 1500);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('visible');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('visible');
+        }
+
+        // Initialize cookie banner
+        document.addEventListener('DOMContentLoaded', showCookieBanner);
+
+        // Form Submit
         function handleSubmit(event) {
             event.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
-            // Имитация отправки
-            alert(`Thank you, ${name}!\n\nYour message has been received.\n\nSubject: ${subject}\nEmail: ${email}\n\nWe will get back to you soon!\n\n[This is a demo form - integrate with backend later]`);
+            // Show success message
+            const btn = event.target.querySelector('.form-submit');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
 
-            // Очистить форму
-            document.querySelector('form').reset();
+            // Simulate sending (replace with actual backend integration)
+            setTimeout(function() {
+                alert(`Thank you, ${name}!\n\nYour message has been received.\n\nSubject: ${subject}\nEmail: ${email}\n\nWe will get back to you within 24-48 hours.`);
+                document.querySelector('form').reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1000);
         }
+
+        // Smooth reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .timeline-item, .stat').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+{
+    "name": "SOFTSURE - E-Commerce & Marketing Solutions",
+    "short_name": "SOFTSURE",
+    "description": "International e-commerce, digital marketing, and AI analytics platform",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f1419",
+    "theme_color": "#0066ff",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["business", "productivity"],
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%230066ff;stop-opacity:1' /><stop offset='50%25' style='stop-color:%2300d9ff;stop-opacity:1' /><stop offset='100%25' style='stop-color:%230080ff;stop-opacity:1' /></linearGradient></defs><rect x='10' y='10' width='80' height='80' rx='15' ry='15' fill='url(%23grad)' /><text x='50' y='65' font-size='60' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'>S</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419"/>
+      <stop offset="100%" style="stop-color:#1a1f2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066ff"/>
+      <stop offset="50%" style="stop-color:#00d9ff"/>
+      <stop offset="100%" style="stop-color:#0080ff"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066ff"/>
+      <stop offset="100%" style="stop-color:#0080ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="1100" cy="100" r="200" fill="#0066ff" opacity="0.1"/>
+  <circle cx="100" cy="530" r="150" fill="#00d9ff" opacity="0.1"/>
+
+  <!-- Logo icon -->
+  <rect x="100" y="220" width="120" height="120" rx="25" fill="url(#accent)"/>
+  <text x="160" y="305" font-size="80" font-weight="900" text-anchor="middle" fill="white" font-family="Arial, sans-serif">S</text>
+
+  <!-- Company name -->
+  <text x="250" y="300" font-size="72" font-weight="800" fill="url(#textGrad)" font-family="Arial, sans-serif">SOFTSURE</text>
+
+  <!-- Tagline -->
+  <text x="100" y="400" font-size="36" fill="#e8eaed" font-family="Arial, sans-serif" font-weight="600">E-Commerce &amp; Marketing Solutions</text>
+
+  <!-- Description -->
+  <text x="100" y="460" font-size="24" fill="#b0b5bb" font-family="Arial, sans-serif">International Trade | AI Analytics | Digital Marketing</text>
+
+  <!-- Website -->
+  <text x="100" y="560" font-size="20" fill="#0066ff" font-family="Arial, sans-serif">softsure.vercel.app</text>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#accent)"/>
+</svg>
